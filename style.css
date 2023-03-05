@@ -7,6 +7,7 @@
 body {
     background-color: #fff9f9 !important;
 }
+/* ========== Header Area ========== */
 #header nav div .navbar-brand{
     font-family: titleFont;
     font-weight: 700;
@@ -20,4 +21,14 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: #000000;
+}
+/* ========== Category Section ========== */
+/* #category p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #0000008f;
+} */
+/* ========== News Counting Section ========== */
+#news-counting{
+    box-shadow: 0px 1px 14px 4px #0000000d;
 }
