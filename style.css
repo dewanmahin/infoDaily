@@ -3,7 +3,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Bebas+Neue&family=Josefin+Sans:wght@700&display=swap');
 }
 
-
 body {
     background-color: #fff9f9 !important;
 }
@@ -23,12 +22,39 @@ body {
     color: #000000;
 }
 /* ========== Category Section ========== */
-/* #category p {
+#category p {
     font-size: 17px;
     font-weight: 500;
     color: #0000008f;
-} */
+}
 /* ========== News Counting Section ========== */
 #news-counting{
-    box-shadow: 0px 1px 14px 4px #0000000d;
+    box-shadow: 0px 1px 14px 4px #00000008;
+}
+#news-counting p{
+    font-size: 18px;
+    font-weight: 600;
+}
+/* ========== News Card Section ========== */
+#cards .card{
+    box-shadow: 0px 3px 15px 5px #00000014;
+}
+#cards .card-title{
+    font-weight: 700;
+    font-size: 22px;
+}
+#cards .card-text{
+    font-size: 16px;
+    color: #898989;
+}
+#cards .author-image{
+    width: 40px;
+    border-radius: 100%;
+}
+#cards .author p, .views p{
+    font-size: 16px;
+    font-weight: 600;
+}
+#cards .details button{
+    background-color: #6725ff;
 }
