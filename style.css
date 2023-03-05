@@ -1,0 +1,23 @@
+@font-face{
+    font-family: titleFont;
+    @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Bebas+Neue&family=Josefin+Sans:wght@700&display=swap');
+}
+
+
+body {
+    background-color: #fff9f9 !important;
+}
+#header nav div .navbar-brand{
+    font-family: titleFont;
+    font-weight: 700;
+    font-size: 40px;
+    color: #6725ff;
+}
+#header nav p:first-child{
+    color: #6725ff;
+}
+#header nav p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
