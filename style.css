@@ -26,6 +26,7 @@ body {
     font-size: 17px;
     font-weight: 500;
     color: #0000008f;
+    cursor: pointer;
 }
 /* ========== News Counting Section ========== */
 #news-counting{
@@ -36,25 +37,25 @@ body {
     font-weight: 600;
 }
 /* ========== News Card Section ========== */
-#cards .card{
+#cardsContainer .card{
     box-shadow: 0px 3px 15px 5px #00000014;
 }
-#cards .card-title{
+#cardsContainer .card-title{
     font-weight: 700;
     font-size: 22px;
 }
-#cards .card-text{
+#cardsContainer .card-text{
     font-size: 16px;
     color: #898989;
 }
-#cards .author-image{
+#cardsContainer .author-image{
     width: 40px;
     border-radius: 100%;
 }
-#cards .author p, .views p{
+#cardsContainer .author p, .views p{
     font-size: 16px;
     font-weight: 600;
 }
-#cards .details button{
+#cardsContainer .details button{
     background-color: #6725ff;
 }
