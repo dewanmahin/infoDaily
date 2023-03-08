@@ -18,6 +18,7 @@ const displayCategories = (categories) => {
 }
 // Get Specific News Category from API
 const getCategoryNews = async(categoryId) => {
+    toggleSpinner(true); // start spinning
     const url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`
     const res = await fetch(url);
     const data = await res.json();
@@ -61,21 +62,6 @@ const displayNews = (allNews) => {
                                 <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Details
                                 </button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">...</div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -84,10 +70,21 @@ const displayNews = (allNews) => {
             `
             cardsContainer.appendChild(cardDiv);
         })
+        toggleSpinner(false); // stop spinning
     }else{
         cardsContainer.innerHTML = `
         <p class='text-danger text-center fs-1 fw-bold'>No news available in this category.</p>
         `
+        toggleSpinner(false); // stop spinning
+    }
+}
+// Spinner Toggle Function
+const toggleSpinner = isLoading => {
+    const spinner = document.getElementById('spinner');
+    if(isLoading){
+        spinner.classList.remove('d-none');
+    }else{
+        spinner.classList.add('d-none');
     }
 }
 
