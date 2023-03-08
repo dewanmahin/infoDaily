@@ -85,7 +85,7 @@ const newsDetails = async newsId => {
     const data = await res.json();
     showDetails(data.data[0]);
 }
-// Show News Details in API
+// Show News Details in Modal
 const showDetails = data => {
     console.log(data);
     const modalData = document.getElementById('modalData');

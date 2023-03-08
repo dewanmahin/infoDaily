@@ -60,3 +60,17 @@ body {
     background-color: #6725ff;
 }
 /* ========== Modal Section ========== */
+#modal .modal-footer button{
+    background-color: #6725ff;
+    color: white;
+}
+
+/* ==================== Mobile Responsive CSS ==================== */
+@media only screen and (max-width: 576px) {
+    #header, #main{
+        width: 98% !important;
+    }
+    #header nav div .navbar-brand{
+        font-size: 30px;
+    }
+}
