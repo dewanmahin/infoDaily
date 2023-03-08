@@ -59,7 +59,7 @@ const displayNews = (allNews) => {
                             </div>
                             <!-- Details -->
                             <div class="details">
-                                <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button onclick="newsDetails('${news._id}')" type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Details
                                 </button>
                             </div>
@@ -77,6 +77,23 @@ const displayNews = (allNews) => {
         `
         toggleSpinner(false); // stop spinning
     }
+}
+// Get News Details from API
+const newsDetails = async newsId => {
+    const url = `https://openapi.programming-hero.com/api/news/${newsId}`
+    const res = await fetch(url);
+    const data = await res.json();
+    showDetails(data.data[0]);
+}
+// Show News Details in API
+const showDetails = data => {
+    console.log(data);
+    const modalData = document.getElementById('modalData');
+    modalData.innerHTML = `
+    <img class='w-100' src="${data.image_url}" />
+    <h3 class="my-3">${data.title}</h3>
+    <p>${data.details}</p>
+    `
 }
 // Spinner Toggle Function
 const toggleSpinner = isLoading => {
