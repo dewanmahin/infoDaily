@@ -25,8 +25,12 @@ body {
 #category p {
     font-size: 17px;
     font-weight: 500;
-    color: #0000008f;
     cursor: pointer;
+    background: #6725ff57;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 16px;
+    border: 0px;
 }
 /* ========== News Counting Section ========== */
 #news-counting{

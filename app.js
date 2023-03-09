@@ -1,9 +1,13 @@
 // Get News Categories from API
 const newsCategories = async() => {
-    const url = `https://openapi.programming-hero.com/api/news/categories`;
-    const res = await fetch(url);
-    const data = await res.json();
-    displayCategories(data.data.news_category);
+    try{
+        const url = `https://openapi.programming-hero.com/api/news/categories`;
+        const res = await fetch(url);
+        const data = await res.json();
+        displayCategories(data.data.news_category);
+    }catch(error){
+        console.log(error);
+    }
 }
 // All Category option has been displayed
 const displayCategories = (categories) => {
