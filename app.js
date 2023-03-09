@@ -77,7 +77,7 @@ const displayNews = (allNews) => {
         toggleSpinner(false); // stop spinning
     }else{
         cardsContainer.innerHTML = `
-        <p class='text-danger text-center fs-1 fw-bold'>No news available in this category.</p>
+        <p class='text-danger text-center fs-1 fs-sm-4 fw-bold'>No news available in this category.</p>
         `
         toggleSpinner(false); // stop spinning
     }

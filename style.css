@@ -13,6 +13,16 @@ body {
     font-size: 40px;
     color: #6725ff;
 }
+#footer{
+    font-size: 18px;
+    font-weight: 600;
+}
+#footer span{
+    font-family: titleFont;
+    font-weight: bold;
+    font-size: 22px;
+    color: #6725ff;
+}
 #header nav p:first-child{
     color: #6725ff;
 }
@@ -24,13 +34,19 @@ body {
 /* ========== Category Section ========== */
 #category p {
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     background: #6725ff57;
     color: black;
     padding: 4px 8px;
     border-radius: 16px;
     border: 0px;
+}
+#category p:hover {
+    background: #FFF9F9;
+    color: #6725ff;
+    box-shadow: 0px 1px 4px 1px #00000017;
+    transition: 0.2s;
 }
 /* ========== News Counting Section ========== */
 #news-counting{
