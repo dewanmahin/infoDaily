@@ -30,6 +30,10 @@ const getCategoryNews = async(categoryId) => {
 }
 // Display All News from specific category
 const displayNews = (allNews) => {
+    // Sorting array of objects based on total_view value
+    allNews.sort((v1, v2) => 
+        (v1.total_view < v2.total_view) ? 1 : (v1.total_view > v2.total_view) ? -1 : 0
+    );
     // Update news counting number
     const newsCounting = document.getElementById('news-counting');
     newsCounting.innerHTML = `
